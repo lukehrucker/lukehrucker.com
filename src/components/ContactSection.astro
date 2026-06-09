@@ -1,0 +1,29 @@
+---
+const socials = [
+  { href: "mailto:hello@lukehrucker.com", label: "Email" },
+  { href: "https://github.com/lukehrucker", label: "GitHub" },
+  { href: "https://x.com/lukehrucker", label: "X" },
+  { href: "https://linkedin.com/in/luke-rucker", label: "LinkedIn" },
+];
+---
+
+<section class="relative overflow-hidden border-t border-[var(--rule)] py-[130px] max-sm:py-20" id="contact">
+  <div class="pointer-events-none absolute left-1/2 top-[40%] size-[56rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(241_87_42_/_14%),transparent_60%)]"></div>
+  <div class="relative z-[1] mx-auto w-[min(100%-44px,1180px)] max-sm:w-[min(100%-36px,1180px)]">
+    <span class="font-mono text-[0.69rem] uppercase tracking-[0.18em] text-[var(--accent)]">[ Get in touch ]</span>
+    <p class="mt-6 max-w-[16ch] text-[clamp(2.13rem,6vw,4.75rem)] font-semibold leading-none tracking-[-0.04em]">
+      Building something ambitious, or hiring engineers who give a damn?
+      <a class="relative inline-block whitespace-nowrap text-[var(--accent)] after:absolute after:inset-x-0 after:bottom-1 after:h-[3px] after:bg-[var(--accent)] after:shadow-[0_0_18px_var(--accent)]" href="mailto:hello@lukehrucker.com">Say hello</a>
+    </p>
+    <div class="mt-[70px] flex flex-wrap items-end justify-between gap-6 max-sm:items-start">
+      <div class="flex flex-wrap gap-2.5">
+        {socials.map((social) => <a class="rounded-full border border-[var(--rule-2)] px-[18px] py-2.5 font-mono text-[0.81rem] text-[var(--ink-2)] transition-colors duration-200 hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--ink)]" href={social.href}>{social.label}</a>)}
+      </div>
+      <div class="text-right font-mono text-[0.69rem] leading-[1.9] text-[var(--ink-3)] max-sm:text-left">
+        lukehrucker.com<br />
+        (c) 2026 Luke Rucker<br />
+        Set in Space Grotesk &amp; IBM Plex Mono
+      </div>
+    </div>
+  </div>
+</section>

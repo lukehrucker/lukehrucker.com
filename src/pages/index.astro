@@ -1,17 +1,95 @@
 ---
+import ContactSection from "../components/ContactSection.astro";
+import Hero from "../components/Hero.astro";
+import PhotoBand from "../components/PhotoBand.astro";
+import Pursuits from "../components/Pursuits.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import WorkRows from "../components/WorkRows.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+const buildingRows = [
+  {
+    href: "https://wordledash.io",
+    eyebrow: "2025 ->",
+    title: "Wordle Dash",
+    tag: "Live",
+    description:
+      "Multiplayer Wordle with friends - Co-Op on one shared board, or a 1v1 Dash race on separate boards with the same hidden word. Real-time, built on PartyKit.",
+    action: "wordledash.io",
+  },
+  {
+    href: "https://everywordle.com",
+    eyebrow: "2025 ->",
+    title: "EveryWordle",
+    tag: "Live",
+    description:
+      "Every Wordle that has ever been, archived and replayable. A tidy little corner of the internet for word-game completionists.",
+    action: "everywordle.com",
+  },
+];
+
+const workRows = [
+  {
+    eyebrow: "Founding CTO",
+    title: "Ruth",
+    tag: "Negotiation AI",
+    description:
+      "An autonomous negotiation agent - software that bargains on your behalf over email and voice and actually closes. I led engineering and product from zero, owning the architecture, the models, and the interface.",
+    action: "Case study",
+  },
+  {
+    eyebrow: "Earlier",
+    title: "Product engineering & leadership",
+    tag: "Teams",
+    description:
+      "A decade of shipping at the seams of product and infrastructure - taking ideas from napkin to production, hiring the engineers who make them real, and keeping the whole thing fast.",
+    action: "More on request",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Luke Rucker - Nocturne" description="Luke Rucker builds AI products end-to-end as a product engineer and former startup CTO.">
+  <SiteHeader />
+  <main>
+    <Hero />
+
+    <section class="border-t border-[var(--rule)] py-[110px] max-sm:py-20" id="building">
+      <div class="mx-auto w-[min(100%-44px,1180px)] max-sm:w-[min(100%-36px,1180px)]">
+        <SectionHeader
+          number="01"
+          title="Building now"
+          subtitle="Small, fast products I make on nights and weekends. A way to keep my hands dirty between bigger bets."
+        />
+        <WorkRows rows={buildingRows} />
+      </div>
+    </section>
+
+    <section class="border-t border-[var(--rule)] py-[110px] max-sm:py-20" id="work">
+      <div class="mx-auto w-[min(100%-44px,1180px)] max-sm:w-[min(100%-36px,1180px)]">
+        <SectionHeader
+          number="02"
+          title="Selected work"
+          subtitle="Where I have spent the deep hours - building real products and the teams behind them."
+        />
+        <WorkRows rows={workRows} />
+      </div>
+    </section>
+
+    <section class="border-t border-[var(--rule)] pt-[110px] max-sm:pt-20" id="offclock">
+      <div class="mx-auto w-[min(100%-44px,1180px)] max-sm:w-[min(100%-36px,1180px)]">
+        <SectionHeader
+          number="03"
+          title="Off the clock"
+          subtitle="The same engine that ships products also climbs hills. State-champion roots in Texas, a camera never far behind."
+        />
+      </div>
+      <PhotoBand />
+      <div class="mx-auto w-[min(100%-44px,1180px)] py-[110px] pt-20 max-sm:w-[min(100%-36px,1180px)] max-sm:py-20">
+        <Pursuits />
+      </div>
+    </section>
+
+    <ContactSection />
+  </main>
+</BaseLayout>

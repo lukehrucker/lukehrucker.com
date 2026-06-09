@@ -1,0 +1,31 @@
+---
+const pursuits = [
+  {
+    label: "Road / Gravel / MTB",
+    text: "Former Texas state champion. Road racing first, but you will find me on gravel and singletrack most weekends.",
+  },
+  {
+    label: "On foot",
+    text: "Hiking when the climbs ask for a slower pace and a longer view.",
+  },
+  {
+    label: "Photography",
+    text: "Landscapes mostly. The discipline of composition is the same as good interface design.",
+  },
+  {
+    label: "Videography",
+    text: "Just getting started. Learning to make things move - the next medium to figure out.",
+  },
+];
+---
+
+<div class="grid grid-cols-2 gap-px overflow-hidden rounded-md border border-[var(--rule)] bg-[var(--rule)] max-sm:grid-cols-1">
+  {
+    pursuits.map((pursuit) => (
+      <article class="bg-[var(--bg-2)] px-7 py-[26px] transition-colors duration-200 hover:bg-[#131318]">
+        <h3 class="m-0 font-mono text-[0.69rem] font-medium uppercase tracking-[0.1em] text-[var(--accent)]">{pursuit.label}</h3>
+        <p class="mt-3 text-[0.97rem] leading-[1.55] text-[var(--ink-2)]">{pursuit.text}</p>
+      </article>
+    ))
+  }
+</div>
