@@ -4,7 +4,7 @@
 <section class="relative flex min-h-svh items-center overflow-hidden">
   <div class="pointer-events-none absolute -left-[8%] -top-[34%] z-0 size-[68rem] rounded-full bg-[radial-gradient(circle,var(--accent-soft),transparent_62%)] blur-[8px]"></div>
   <div class="pointer-events-none absolute -bottom-[28%] -right-[10%] z-0 size-[44rem] rounded-full bg-[radial-gradient(circle,rgb(241_87_42_/_10%),transparent_64%)]"></div>
-  <div class="relative z-[1] mx-auto grid w-[min(100%-44px,1180px)] grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] items-center gap-[clamp(2rem,6vw,4rem)] py-20 pt-32 max-lg:grid-cols-1 max-sm:w-[min(100%-36px,1180px)]">
+  <div class="site-container relative z-[1] grid grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] items-center gap-[clamp(2rem,6vw,4rem)] py-20 pt-32 max-lg:grid-cols-1">
     <div>
       <div class="mb-[30px] flex items-center gap-3">
         <span class="size-2 rounded-full bg-[var(--accent)] shadow-[0_0_16px_2px_var(--accent)]"></span>
@@ -21,5 +21,9 @@
       <div class="absolute bottom-3.5 left-4"><span class="font-mono text-[0.69rem] uppercase tracking-[0.18em] text-white/85">Fig.01 / Texas, USA</span></div>
     </div>
   </div>
-  <div class="mx-auto w-[min(100%-44px,1180px)] max-sm:w-[min(100%-36px,1180px)]"><div class="absolute bottom-[30px] z-[2] flex items-center gap-3 font-mono text-[0.69rem] uppercase tracking-[0.14em] text-[var(--ink-3)] max-lg:hidden"><span class="scroll-line"></span>Scroll</div></div>
+  <div class="absolute inset-x-0 bottom-[30px] z-[2] max-lg:hidden">
+    <div class="site-container">
+      <div class="flex items-center gap-3 font-mono text-[0.69rem] uppercase tracking-[0.14em] text-[var(--ink-3)]"><span class="scroll-line"></span>Scroll</div>
+    </div>
+  </div>
 </section>

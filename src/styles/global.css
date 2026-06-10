@@ -56,6 +56,17 @@ a {
   text-decoration: none;
 }
 
+.site-container {
+  width: min(100% - 44px, 1180px);
+  margin-inline: auto;
+}
+
+@media (width < 40rem) {
+  .site-container {
+    width: min(100% - 36px, 1180px);
+  }
+}
+
 .is-scrolled {
   border-color: var(--rule);
   background: rgb(8 8 10 / 72%);
